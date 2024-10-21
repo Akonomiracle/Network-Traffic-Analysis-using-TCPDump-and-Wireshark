@@ -19,3 +19,27 @@ Developed a tool for capturing and analyzing network traffic using TCPDump. The 
 - Bash (Shell)
 
 ## Steps
+
+![P1](https://github.com/user-attachments/assets/e0a24ac6-f342-4948-a6e6-f1c3045629ce)
+
+Ref 1. Building the shell script for the logging tool and exploring target options.
+- -i limits the interface to be captured, in this case, any interface is allowed
+- The capture is limited to port 22
+- -w writes the captured data to sshcatpure.pcap
+- -C & -G set the size and time limits respectively.
+
+![P2 Once the script is executed, the  pcap file becomes visible](https://github.com/user-attachments/assets/44b3f723-a42c-436a-a6e5-e22fbe68033d)
+
+Ref 2. Once the script is executed, the .pcap file becomes visible.
+- -x execute right is given to checkspy.sh
+- dump file stopped at 3MB and creates a new file
+
+![P4](https://github.com/user-attachments/assets/fa8ad694-01d7-45d5-9efd-7b2e33611d11)
+
+Ref 3. The SSH traffic is easily noticeable on Wireshark. Though the source IP is from our host machine.
+- After generating traffic, captured data is opened in Wireshark for readability.
+
+![P5](https://github.com/user-attachments/assets/f9049d2c-ece8-47e0-8c53-0bb37160f7ee)
+
+Ref 4. It is easier to locate packets using display filters.
+
